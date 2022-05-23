@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+</head>
+
+<style>
+    #timeline2 {
+        height: 15%;
+        margin-top: 30%;
+        margin-left: 70%;
+        width: 2.2%;
+        position: relative;
+        background-color: greenyellow;
+        border-radius: 5px;
+        display: none;
+    }
+
+    #timeline3 {
+        height: 15%;
+        margin-left: 66%;
+        margin-top: -2%;
+        position: relative;
+        width: 10%;
+        position: relative;
+        display: none;
+        background-color: greenyellow;
+        border-radius: 50px;
+        -ms-transform: skew(-10deg);
+        transform: skew(-10deg);
+
+    }
+
+    #timeline4 {
+        height: 25%;
+        margin-top: -1%;
+        display: none;
+        margin-left: 69%;
+        width: 3%;
+        position: relative;
+        background-color: greenyellow;
+        border-radius: 5px;
+    }
+
+    #timeline5 {
+        height: 15%;
+        margin-top: -20%;
+        display: none;
+        margin-left: 73%;
+        width: 2.2%;
+        position: relative;
+        background-color: greenyellow;
+        border-radius: 5px;
+        -ms-transform: skew(30deg);
+        transform: skew(30deg);
+
+    }
+
+    #timeline6 {
+        height: 15%;
+        margin-top: -12%;
+        margin-left: 66%;
+        width: 2.2%;
+        position: relative;
+        background-color: greenyellow;
+        border-radius: 5px;
+        display: none;
+        -ms-transform: skew(-30deg);
+        transform: skew(-30deg);
+    }
+
+    #timeline7 {
+        height: 15%;
+        margin-top: 2%;
+        margin-left: 66%;
+        width: 2.2%;
+        position: relative;
+        background-color: greenyellow;
+        border-radius: 5px;
+        display: none;
+        -ms-transform: skew(-30deg);
+        transform: skew(-30deg);
+    }
+
+    #timeline8 {
+        height: 15%;
+        margin-top: -12%;
+        margin-left: 73%;
+        width: 2.2%;
+        position: relative;
+        background-color: greenyellow;
+        border-radius: 5px;
+        display: none;
+        -ms-transform: skew(30deg);
+        transform: skew(30deg);
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 mt-5">
+              
+
+                <div id="timeline" style="height: 2.2%; width: 100%; background-color: brown; border-radius: 5px;">
+                </div>
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" id="name">
+                        <label for="name" id="namelabel">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="father Name" id="name1">
+                        <label for="name" id="namelabel1">father Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="brother Name" id="name2">
+                        <label for="name" id="namelabel2">brother Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="your nickname name" id="name3">
+                        <label for="name" id="namelabel3">your nickname Name</label>
+                    </div>
+                </form>
+                <button class="btn btn-info" id="sbtn">submit</button>
+            </div>
+            <div class="col-md-6">
+                <h1 style="margin-left: 40%;" class="mt-5">Help</h1>
+                <img src="b85a08479325c39b79b91e5cb2c24910.jpg" style="height: 100%;position: absolute;" alt="">
+                <div id="timeline2"></div>
+                <div id="timeline3"></div>
+                <div id="timeline4"></div>
+                <div id="timeline5"></div>
+                <div id="timeline6"></div>
+                <div id="timeline7"></div>
+                <div id="timeline8"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="spinner-border text-warning" role="status">
+    <span class="visually-hidden"></span>
+  </div> -->
+
+
+    <script>
+
+        $(document).ready(function () {
+            var yname = "nehal";
+            $("#sbtn").click(function () {
+                var name = $("#name").val();
+                if (name != yname) {
+                    $("#timeline2").show().css("background", "yellow");
+                   
+                }
+                else {
+                    $("#timeline2").hide();
+
+                }
+            })
+
+            var fname = "mehmood";
+            $("#sbtn").click(function () {
+
+                var name1 = $("#name1").val();
+                if (name1 != fname) {
+                    $("#timeline3").show().css("background", "yellow");
+                    $("#timeline4").show().css("background", "orange");
+
+                   
+                }
+                else {
+                    $("#timeline3").hide();
+                    $("#timeline4").hide();
+                    
+                }
+            })
+
+            var bname = "khurram";
+            $("#sbtn").click(function () {
+
+                var name2 = $("#name2").val();
+                if (name2 != bname) {
+                    $("#timeline5").show().css("background", "orange");
+                    $("#timeline6").show().css("background", "orange");
+                
+                }
+                else {
+                    $("#timeline5").hide();
+                    $("#timeline6").hide();
+                    
+                }
+            })
+
+            var nicname = "hamza";
+            $("#sbtn").click(function () {
+
+                var name3 = $("#name3").val();
+                if (name3 != nicname) {
+                    $("#timeline7").show().css("background", "red");
+                    $("#timeline8").show().css("background", "red");
+          
+                }
+                else {
+                    $("#timeline7").hide();
+                    $("#timeline8").hide();
+                  
+                }
+            })
+
+            if (yname == name && fname == name1 && bname == name2 && nicname == name3) {
+                $("#timeline2").hide().css("background", "red");
+                $("#timeline3").hide().css("background", "red");
+                $("#timeline4").hide().css("background", "red");
+                $("#timeline5").hide().css("background", "red");
+                $("#timeline6").hide().css("background", "red");
+                $("#timeline7").hide().css("background", "red");
+                $("#timeline8").hide().css("background", "red");
+                
+            }
+            else{
+                $("#timeline2").show().css("background", "red");
+                $("#timeline3").show().css("background", "red");
+                $("#timeline4").show().css("background", "red");
+                $("#timeline5").show().css("background", "red");
+                $("#timeline6").show().css("background", "red");
+                $("#timeline7").show().css("background", "red");
+                $("#timeline8").show().css("background", "red");
+            }
+
+        })
+
+    </script>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
